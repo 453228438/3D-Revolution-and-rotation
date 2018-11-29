@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D公转自转</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body,html {
+            width: 100%;
+            height: 100%;
+            background: url("day16/images/xk.jpg") no-repeat;
+            -webkit-background-size: cover;
+            background-size: cover;
+        }
+        .warp{
+            height: 1000px;
+            width: 1000px;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            transform-style: preserve-3d;
+        }
+        .circle {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+            transform-style: preserve-3d;
+            box-shadow: 5px 5px 50px #fff;
+            animation: go 10s linear infinite;
+        }
+        .box01 {
+            width: 300px;
+            height: 300px;
+            box-shadow: none;
+        }
+        .circle span {
+            display: block;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 1px solid  #D4AF37;
+            position: absolute;
+            top: 0;
+            left: 0;
+            box-shadow: 0 0 25px #D4AF37;
+        }
+        .circle span:nth-child(2) {
+            transform: rotateX(40deg);
+        }
+        .circle span:nth-child(3) {
+            transform: rotateX(80deg);
+        }
+        .circle span:nth-child(4) {
+            transform: rotateX(120deg);
+        }
+        .circle span:nth-child(5) {
+            transform: rotateX(160deg);
+        }
+        .circle span:nth-child(6) {
+            transform: rotateX(200deg);
+        }
+        .circle span:nth-child(7) {
+            transform: rotateX(240deg);
+        }
+        .circle span:nth-child(8) {
+            transform: rotateX(280deg);
+        }
+        .circle span:nth-child(9) {
+            transform: rotateX(320deg);
+        }
+        .circle span:nth-child(10) {
+            transform: rotateY(0deg);
+        }
+        .circle span:nth-child(11) {
+            transform: rotateY(40deg);
+        }
+        .circle span:nth-child(12) {
+            transform: rotateY(80deg);
+        }
+        .circle span:nth-child(13) {
+            transform: rotateY(120deg);
+        }
+        .circle span:nth-child(14) {
+            transform: rotateY(160deg);
+        }
+        .circle span:nth-child(15) {
+            transform: rotateY(200deg);
+        }
+        .circle span:nth-child(16) {
+            transform: rotateY(240deg);
+        }
+        .circle span:nth-child(17) {
+            transform: rotateY(280deg);
+        }
+        .circle span:nth-child(18) {
+            transform: rotateY(320deg);
+        }
+        .box02 {
+            width: 500px;
+            height: 500px;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            transform: rotateX(63deg)rotateY(-10deg);
+        }
+        .box02 span{
+            width: 40px;
+            height: 40px;
+            border-color: pink;
+            box-shadow: 0 0 10px pink;
+            position: absolute;
+            left: 54px;
+            top: 43px;
+        }
+        .box03 {
+            width: 700px;
+            height: 700px;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            transform: rotateX(63deg)rotateY(-10deg);
+        }
+        .box03 span{
+            width: 120px;
+            height: 120px;
+            border-color: yellow;
+            box-shadow: 0 0 10px yellow;
+            position: absolute;
+            left: 370px;
+            top: 630px;
+        }
+        .box04 {
+            width: 900px;
+            height: 900px;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            transform: rotateX(63deg)rotateY(-10deg);
+        }
+        .box04 span{
+            width: 80px;
+            height: 80px;
+            border-color: red;
+            box-shadow: 0 0 10px red;
+            position: absolute;
+            left: 440px;
+            top: -50px;
+        }
+        @keyframes  go{
+            0% {
+                transform: rotateX(63deg)rotateY(-10deg)rotateZ(0deg);
+            }
+            100% {
+                transform: rotateX(63deg)rotateY(-10deg)rotateZ(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="warp">
+        <div class="box01 circle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="box02 circle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="box03 circle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="box04 circle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</body>
+</html>
